@@ -67,3 +67,9 @@ function calcular(){
   console.log("Energia Mecanica= " + energiaMecanica);
   $("#energiaMecanicaResultado").text(energiaMecanica);
 }
+
+// input enter
+var formulario = document.getElementById("formulario");
+formulario.addEventListener("keyup", function (e) {
+  calcular();
+});
