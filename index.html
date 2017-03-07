@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Joules</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="grey lighten-4 height">
+
+    <!-- dedication -->
+    <div id="dedication" class="flow-text absolute width center" style="bottom: 20px; z-index: 3;">
+      Dedicado a Cristina Martínez
+    </div>
+
+    <!-- splash screen -->
+    <div id="splashScreen" class="grey lighten-3 valign-wrapper height width absolute z-depth-2" style="z-index: 2;">
+      <div id="splashScreenLoader" class="flow-text absolute width center" style="top: 0px;">
+        <div class="progress grey lighten-4" style="margin-top: 0px;">
+          <div class="indeterminate pink"></div>
+        </div>
+      </div>
+      <div class="valign width">
+        <center>
+          <h1 class="space pink-text inline">J</h1><h1 class="space black-text inline">oules</h1>
+        </center>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="absolute width height" style="overflow: auto; z-index: 0;">
+      <div class="container">
+
+        <!-- inputs -->
+        <div class="card grey lighten-5">
+          <div class="card-content">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col l1 s4">
+                    <input id="masa" type="number" style="margin-bottom: 0px;">
+                    <label for="masa">Masa</label>
+                  </div>
+                  <div class="input-field col l1 s4">
+                    <input id="gravedad" value="9.8" type="number" style="margin-bottom: 0px;">
+                    <label for="gravedad">Gravedad</label>
+                  </div>
+                  <div class="input-field col l2 s4">
+                    <input placeholder="metros" id="altura" type="number" style="margin-bottom: 0px;">
+                    <label for="altura">Altura</label>
+                  </div>
+                  <div class="col s12 hide-on-med-and-up" style="height: 16px;">
+
+                  </div>
+                  <div class="input-field col l3 s4">
+                    <input placeholder="Metros Desplazados" id="espacio" type="number" style="margin-bottom: 0px;">
+                    <label for="espacio">Espacio</label>
+                  </div>
+                  <div class="input-field col l3 s4">
+                    <input placeholder="Tiempo en desplazarse" id="tiempo" type="number" style="margin-bottom: 0px;">
+                    <label for="tiempo">Tiempo</label>
+                  </div>
+                  <div class="col l2 s4">
+                    <a onclick="calcular()" class="width btn pink waves-effect waves-dark"><i class="material-icons">send</i></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- output -->
+        </br>
+
+        <h5 class="grey-text">Energía Potencial=</h5>
+        <h4 class="inline space" id="energiaPotencial">M × G × H</h4><h4 class="inline grey-text"> = </h4><h4 id="energiaPotencialResultado" class="inline space pink-text">X</h4></br>
+
+        </br>
+
+        <h5 class="space grey-text">Energía Cinética=</h5>
+        <h4 class="inline space" id="energiaCinetica">½ × M × V²</h4><h4 class="inline grey-text"> = </h4><h4 id="energiaCineticaResultado" class="inline space pink-text">X</h4></br>
+
+        </br>
+
+        <h5 class="space grey-text">Energía Mecánica=</h5>
+        <h4 class="inline space" id="energiaCineticaMecanica">Ec</h4><h4 class="inline grey-text"> + </h4><h4 class="inline space" id="energiaPotencialMecanica">Ep</h4><h4 class="inline grey-text"> = </h4><h4 id="energiaMecanicaResultado" class="inline space pink-text">X</h4></br>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="js/master.js" charset="utf-8"></script>
+  </body>
+</html>
